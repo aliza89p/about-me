@@ -36,12 +36,12 @@ else {
 var playPiano = prompt('Can I read music and play the piano?');
 console.log('Can I read music and play the piano?');
 if ((playPiano.toUpperCase() === 'NO') || (playPiano.toUpperCase() === 'N')) {
-  alert('Wrong! I have played piano since I was a kid and studied music theory in college');
-  console.log('Wrong! I have played piano since I was a kid and studied music theory in college');
+  alert('Wrong! I have played piano since I was a kid and studied music theory in college.');
+  console.log('Wrong! I have played piano since I was a kid and studied music theory in college.');
 }
 else if ((playPiano.toUpperCase() === 'YES') || (playPiano.toUpperCase() === 'Y')) {
-  alert('Correct! I have played piano since I was a kid and studied music theory in college');
-  console.log('Correct! I have played piano since I was a kid and studied music theory in college');
+  alert('Correct! I have played piano since I was a kid and studied music theory in college.');
+  console.log('Correct! I have played piano since I was a kid and studied music theory in college.');
 }
 else {
   alert('That is not a valid answer. Moving on...');
