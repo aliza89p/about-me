@@ -2,12 +2,25 @@ var personName = prompt('Hey! I would love to get to know you a bit. What is you
 alert('Wow ' + personName + ', what a fantastic name!');
 console.log('Hey! I would love to get to know you a bit. What is your name?');
 
-var personAge = prompt('How old are you?');
-alert('Aww, ' + personAge + ' is a good age. But remember, age is only a number.');
-console.log('How old are you?');
+var favColor = prompt('Is my favorite color red?');
+var yesString = 'yes' || 'y';
+var noString = 'no' || 'n';
+if (favColor.toUpperCase() === yesString.toUpperCase()) {
+  alert('Wrong! My favorite color is turqoise.');
+}
+else if (favColor.toUpperCase() === noString.toUpperCase()) {
+  alert('You are correct! My favorite color is not red, it is turqoise.');
+}
+else {
+  alert('That is not a valid answer. Please answer yes or no.');
+}
+console.log('Is my favorite color red?');
 
-var youngerAge = confirm('You would not want to be any younger, right...?');
-alert('I see you said ' + youngerAge + '. I will say it again, you are the perfect age :)');
+alert(favColor + '! My favorite color is turqoise');
+console.log('Where was I born?');
+
+var myAge = confirm('What is my age?');
+alert('You guessed ' + myAge + '. I am 26 years old, but I will be 27 in the beginning of April');
 console.log('You would not want to be any younger, right...?');
 
 var personPets = confirm('Do you have any pets?');
