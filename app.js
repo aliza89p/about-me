@@ -124,3 +124,6 @@ while (fourGuesses < 4) {
       fourGuesses++;
     }
 }
+if (fourGuesses === 4) {
+  yearBorn = alert('You are out of guesses');
+}
