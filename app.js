@@ -124,6 +124,10 @@ while (fourGuesses < 4) {
       fourGuesses++;
     }
 }
-if (fourGuesses === 4) {
+if (correctYearBorn !== parseInt(yearBorn) && fourGuesses === 4) {
   yearBorn = alert('You are out of guesses');
+}
+else if (correctYearBorn === parseInt(yearBorn) && fourGuesses === 4){
+  alert('Correct!');
+  console.log('Correct!');
 }
