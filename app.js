@@ -5,11 +5,11 @@ console.log('Wow ' + personName + ', what a fantastic name! Now it is time for a
 
 var favColor = prompt('Is my favorite color red?');
 console.log('Is my favorite color red?');
-if ((favColor.toUpperCase() === 'NO') || (favColor.toUpperCase() === 'N')) {
+if (favColor.toUpperCase() === 'NO' || favColor.toUpperCase() === 'N') {
   alert('You are correct! My favorite color is not red, it is turqoise.');
   console.log('You are correct! My favorite color is not red, it is turqoise.');
 }
-else if ((favColor.toUpperCase() === 'YES') || (favColor.toUpperCase() === 'Y')) {
+else if (favColor.toUpperCase() === 'YES' || favColor.toUpperCase() === 'Y') {
   alert('Wrong! My favorite color is turqoise.');
   console.log('Wrong! My favorite color is turqoise.');
 }
@@ -20,11 +20,11 @@ else {
 
 var outsideCountry = prompt('Have I been outside of the country?');
 console.log('Have I been outside of the country?');
-if ((outsideCountry.toUpperCase() === 'NO') || (outsideCountry.toUpperCase() === 'N')) {
+if (outsideCountry.toUpperCase() === 'NO' || outsideCountry.toUpperCase() === 'N') {
   alert('Wrong! I have been to Canada... And Mexico for about an hour...');
   console.log('Wrong! I have been to Canada... And Mexico for about an hour...');
 }
-else if ((outsideCountry.toUpperCase() === 'YES') || (outsideCountry.toUpperCase() === 'Y')) {
+else if (outsideCountry.toUpperCase() === 'YES' || outsideCountry.toUpperCase() === 'Y') {
   alert('Correct! I have been to Canada... And Mexico for about an hour...');
   console.log('Correct! I have been to Canada... And Mexico for about an hour...');
 }
@@ -35,11 +35,11 @@ else {
 
 var playPiano = prompt('Can I read music and play the piano?');
 console.log('Can I read music and play the piano?');
-if ((playPiano.toUpperCase() === 'NO') || (playPiano.toUpperCase() === 'N')) {
+if (playPiano.toUpperCase() === 'NO' || playPiano.toUpperCase() === 'N') {
   alert('Wrong! I have played piano since I was a kid and studied music theory in college.');
   console.log('Wrong! I have played piano since I was a kid and studied music theory in college.');
 }
-else if ((playPiano.toUpperCase() === 'YES') || (playPiano.toUpperCase() === 'Y')) {
+else if (playPiano.toUpperCase() === 'YES' || playPiano.toUpperCase() === 'Y') {
   alert('Correct! I have played piano since I was a kid and studied music theory in college.');
   console.log('Correct! I have played piano since I was a kid and studied music theory in college.');
 }
