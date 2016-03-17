@@ -95,41 +95,48 @@ else {
 */
 
 var yearBorn = prompt('What year was I born? You get four guesses...');
-yearBorn = parseInt(yearBorn);
 console.log('What year was I born? You get four guesses...');
 var fourGuesses = 0;
 var correctYearBorn = 1989;
+yearBorn = parseInt(yearBorn);
 while (fourGuesses < 4) {
-  if (yearBorn === correctYearBorn) {
-    alert('Awesome guess! You are correct!');
-    console.log('Awesome guess! You are correct!');
+  if (yearBorn === parseInt(correctYearBorn)){
+    alert('Correct!');
+    console.log('Correct!');
     break;
   }
-  // else if (yearBorn < 1989) {
-  //   prompt('Come on, I am not that old. Try again...');
-  //   console.log('Come on, I am not that old. Try again...');
-  //   fourGuesses++;
-  // }
-  // else if (yearBorn > 1989) {
-  //   prompt('I am flattered, but I am not that young. Try again...');
-  //   console.log('I am flattered, but I am not that young. Try again...');
-  //   fourGuesses++;
-  // }
-  // else if (yearborn.isNan()) {
-  //   prompt('That is not a number. Please enter a numerical year, e.g. 1843');
-  //   console.log('That is not a number. Please enter a numerical year, e.g. 1843');
-  //   fourGuesses++;
-  // }
-  // else {
-  //   prompt('Nice guess but try again.');
-  //   console.log('Nice guess but try again.');
-  //   fourGuesses++;
-  // }
+  else if (parseInt(yearBorn) < 1989) {
+    yearBorn = prompt('Come on, I am not that old. Try again...');
+    console.log('Come on, I am not that old. Try again...');
+    fourGuesses++;
+  }
+    else if (parseInt(yearBorn) > 1989) {
+      yearBorn = prompt('I am flattered, but I am not that young. Try again...');
+      console.log('I am flattered, but I am not that young. Try again...');
+      fourGuesses++;
+    }
+    else if (isNaN(parseInt(yearBorn)) === true) {
+      yearBorn = prompt('That is not a number. Please enter a numerical year, e.g. 1843');
+      console.log('That is not a number. Please enter a numerical year, e.g. 1843');
+      fourGuesses++;
+    }
+    else {
+      yearBorn = prompt('Nice guess but try again.');
+      console.log('Nice guess but try again.');
+      fourGuesses++;
+    }
+}
 
 
 
 
 
+// var yearBorn = prompt('What year was I born? You get four guesses...');
+// console.log('What year was I born? You get four guesses...');
+// var fourGuesses = 0;
+// var correctYearBorn = 1989;
+// yearBorn = parseInt(yearBorn);
+// while (fourGuesses < 4) {
   //if (yearBorn < 1989) {
 //    prompt('Come on, I am not that old. Try again...');
 //    console.log('Come on, I am not that old. Try again...');
@@ -155,4 +162,3 @@ while (fourGuesses < 4) {
 //      console.log('Awesome guess! You are correct!');
 //      break;
 //    }
-}
