@@ -114,8 +114,8 @@ var correctYearBorn = 1989;
 yearBorn = parseInt(yearBorn);
 while (fourGuesses < 4) {
   if (correctYearBorn === parseInt(yearBorn)){
-    alert('Correct! Nice job! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
-    console.log('Correct! Nice job! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+    alert('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+    console.log('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
     correctGuesses++;
     break;
   }
@@ -142,10 +142,10 @@ while (fourGuesses < 4) {
 }
 if (correctYearBorn !== parseInt(yearBorn) && fourGuesses === 4) {
   correctGuesses++;
-  yearBorn = alert('You are out of guesses. You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
-  console.log('You are out of guesses. You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+  yearBorn = alert('You are out of guesses ' + personName + '. You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+  console.log('You are out of guesses ' + personName + '. You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
 }
 else if (correctYearBorn === parseInt(yearBorn) && fourGuesses === 4){
-  alert('Correct! Nice job! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
-  console.log('Correct! Nice job! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+  alert('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
+  console.log('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
 }
