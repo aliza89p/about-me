@@ -95,39 +95,64 @@ else {
 */
 
 var yearBorn = prompt('What year was I born? You get four guesses...');
+yearBorn = parseInt(yearBorn);
 console.log('What year was I born? You get four guesses...');
 var fourGuesses = 0;
 var correctYearBorn = 1989;
-while (fourGuesses>4) {
-  if (yearBorn < 1989) {
-    prompt('Come on, I am not that old. Try again...');
-    console.log('Come on, I am not that old. Try again...');
-    fourGuesses++;
+while (fourGuesses < 4) {
+  if (yearBorn === correctYearBorn) {
+    alert('Awesome guess! You are correct!');
+    console.log('Awesome guess! You are correct!');
+    break;
   }
-    else if (yearBorn > 1989) {
-      prompt('I am flattered, but I am not that young. Try again...');
-      console.log('I am flattered, but I am not that young. Try again...');
-      fourGuesses++;
-    }
-    else if (yearborn.isNan()) {
-      prompt('That is not a number. Please enter a numerical year, e.g. 1843');
-      console.log('That is not a number. Please enter a numerical year, e.g. 1843');
-      fourGuesses++;
-    }
-    else if (yearBorn != correctYearBorn) {
-      prompt('Nice guess but try again.');
-      console.log('Nice guess but try again.');
-      fourGuesses++;
-    }
-    else {
-      prompt('Awesome guess! You are correct!');
-      console.log('Awesome guess! You are correct!');
-    }
+  // else if (yearBorn < 1989) {
+  //   prompt('Come on, I am not that old. Try again...');
+  //   console.log('Come on, I am not that old. Try again...');
+  //   fourGuesses++;
+  // }
+  // else if (yearBorn > 1989) {
+  //   prompt('I am flattered, but I am not that young. Try again...');
+  //   console.log('I am flattered, but I am not that young. Try again...');
+  //   fourGuesses++;
+  // }
+  // else if (yearborn.isNan()) {
+  //   prompt('That is not a number. Please enter a numerical year, e.g. 1843');
+  //   console.log('That is not a number. Please enter a numerical year, e.g. 1843');
+  //   fourGuesses++;
+  // }
+  // else {
+  //   prompt('Nice guess but try again.');
+  //   console.log('Nice guess but try again.');
+  //   fourGuesses++;
+  // }
+
+
+
+
+
+  //if (yearBorn < 1989) {
+//    prompt('Come on, I am not that old. Try again...');
+//    console.log('Come on, I am not that old. Try again...');
+//    fourGuesses++;
+//  }
+    // else if (yearBorn > 1989) {
+    //   prompt('I am flattered, but I am not that young. Try again...');
+    //   console.log('I am flattered, but I am not that young. Try again...');
+    //   fourGuesses++;
+    // }
+    // else if (yearborn.isNan()) {
+    //   prompt('That is not a number. Please enter a numerical year, e.g. 1843');
+    //   console.log('That is not a number. Please enter a numerical year, e.g. 1843');
+    //   fourGuesses++;
+    // }
+    // else if (yearBorn != correctYearBorn) {
+    //   prompt('Nice guess but try again.');
+    //   console.log('Nice guess but try again.');
+    //   fourGuesses++;
+    // }
+//    else {
+//      alert('Awesome guess! You are correct!');
+//      console.log('Awesome guess! You are correct!');
+//      break;
+//    }
 }
-
-/*
-var numGuesses>=0
-var guess
-(numGuesses<4||guess)
-
-*/
