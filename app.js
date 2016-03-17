@@ -1,4 +1,3 @@
-/*
 var personName = prompt('Hey! I would love to get to know you a bit. What is your name?');
 console.log('Hey! I would love to get to know you a bit. What is your name?');
 alert('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
@@ -92,15 +91,14 @@ else {
   alert('That is not a valid answer. But that is okay.');
   console.log('That is not a valid answer. But that is okay.');
 }
-*/
 
 var yearBorn = prompt('What year was I born? You get four guesses...');
 console.log('What year was I born? You get four guesses...');
-var fourGuesses = 0;
+var fourGuesses = 1;
 var correctYearBorn = 1989;
 yearBorn = parseInt(yearBorn);
 while (fourGuesses < 4) {
-  if (yearBorn === parseInt(correctYearBorn)){
+  if (correctYearBorn === parseInt(yearBorn)){
     alert('Correct!');
     console.log('Correct!');
     break;
@@ -126,39 +124,3 @@ while (fourGuesses < 4) {
       fourGuesses++;
     }
 }
-
-
-
-
-
-// var yearBorn = prompt('What year was I born? You get four guesses...');
-// console.log('What year was I born? You get four guesses...');
-// var fourGuesses = 0;
-// var correctYearBorn = 1989;
-// yearBorn = parseInt(yearBorn);
-// while (fourGuesses < 4) {
-  //if (yearBorn < 1989) {
-//    prompt('Come on, I am not that old. Try again...');
-//    console.log('Come on, I am not that old. Try again...');
-//    fourGuesses++;
-//  }
-    // else if (yearBorn > 1989) {
-    //   prompt('I am flattered, but I am not that young. Try again...');
-    //   console.log('I am flattered, but I am not that young. Try again...');
-    //   fourGuesses++;
-    // }
-    // else if (yearborn.isNan()) {
-    //   prompt('That is not a number. Please enter a numerical year, e.g. 1843');
-    //   console.log('That is not a number. Please enter a numerical year, e.g. 1843');
-    //   fourGuesses++;
-    // }
-    // else if (yearBorn != correctYearBorn) {
-    //   prompt('Nice guess but try again.');
-    //   console.log('Nice guess but try again.');
-    //   fourGuesses++;
-    // }
-//    else {
-//      alert('Awesome guess! You are correct!');
-//      console.log('Awesome guess! You are correct!');
-//      break;
-//    }
