@@ -10,13 +10,13 @@ var favColor = prompt('Is my favorite color red?');
 numOfQuestions++;
 console.log('Is my favorite color red?');
 if (favColor.toUpperCase() === 'NO' || favColor.toUpperCase() === 'N') {
-  alert('You are correct! My favorite color is not red, it is turqoise.');
-  console.log('You are correct! My favorite color is not red, it is turqoise.');
+  alert('You are correct! My favorite color is not red, it is turquoise.');
+  console.log('You are correct! My favorite color is not red, it is turquoise.');
   correctGuesses++;
 }
 else if (favColor.toUpperCase() === 'YES' || favColor.toUpperCase() === 'Y') {
-  alert('Wrong! My favorite color is turqoise.');
-  console.log('Wrong! My favorite color is turqoise.');
+  alert('Wrong! My favorite color is turquoise.');
+  console.log('Wrong! My favorite color is turquoise.');
 }
 else {
   alert('That is not a valid answer. Moving on...');
@@ -78,9 +78,9 @@ var twinSister = prompt('Is my sister my identical twin?');
 numOfQuestions++;
 console.log('Is my sister my identical twin?');
 if ((twinSister.toUpperCase() === 'NO') || (twinSister.toUpperCase() === 'N')) {
+  correctGuesses++;
   alert('You are correct! She is my twin, but we are fraternal. Since you were correct, you get to answer one more bonus question!');
   console.log('You are correct! She is my twin, but we are fraternal. Since you were correct, you get to answer one more bonus question!');
-  correctGuesses++;
   var twinSeattle = prompt('Does my sister live in Seattle?');
   console.log('Does my sister live in Seattle?');
   if ((twinSeattle.toUpperCase() === 'NO') || (twinSeattle.toUpperCase() === 'N')) {
@@ -114,9 +114,9 @@ var correctYearBorn = 1989;
 yearBorn = parseInt(yearBorn);
 while (fourGuesses < 4) {
   if (correctYearBorn === parseInt(yearBorn)){
+    correctGuesses++;
     alert('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
     console.log('Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!');
-    correctGuesses++;
     break;
   }
   else if (parseInt(yearBorn) < 1989) {
