@@ -101,6 +101,20 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 //   console.log('That is not a valid answer. Moving on...');
 // }
 //
+
+var pQuesFour = document.getElementById('ques-four');
+var pAnsFour = document.getElementById('ans-four');
+var userInput = prompt('Did I become a vegetarian as a kid?');
+arrayQuestions.push(pQuesFour);
+if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+  pAnsFour.textContent = 'Correct! I have been a vegetarian since I was 11-years-old.';
+  arrayAnswers.push(userInput);
+}else if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
+  pAnsFour.textContent = 'Wrong! I became a vegetarian when I was 11-years-old.';
+}else{
+  alert('That is not a valid answer. Moving on...');
+}
+
 // var ageVegetarian = prompt('Did I become a vegetarian as a kid?');
 // numOfQuestions++;
 // console.log('Did I become a vegetarian as a kid?');
@@ -118,6 +132,31 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 //   console.log('That is not a valid answer. Moving on...');
 // }
 //
+
+var pQuesFive = document.getElementById('ques-five');
+var pAnsFive = document.getElementById('ans-five');
+var userInput = prompt('Is my sister my identical twin?');
+arrayQuestions.push(pQuesFive);
+if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
+  pAnsFive.textContent = 'You are correct! She is my twin, but we are fraternal. Since you were correct, you get to answer one more bonus question!';
+  var pQuesSix = document.getElementById('ques-six');
+  var pAnsSix = document.getElementById('ans-six');
+  arrayAnswers.push(userInput);
+  var userInput = prompt('Does my sister live in Seattle?');
+  arrayQuestions.push(pQuesSix);
+  if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+    pAnsSix.textContent = 'CORRECT! She lives in Seattle which makes me very happy :)';
+    arrayAnswers.push(userInput);
+  }else if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
+    pAnsSix.textContent = 'You are WRONG! She lives in Seattle.';
+  }else{
+    alert('That is not a valid answer. Moving on...');
+  }
+}else if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+  pAnsFive.textContent = 'Wrong! She is my twin, but we are not identical.';
+}else{
+  alert('That is not a valid answer. Moving on...');
+}
 // var twinSister = prompt('Is my sister my identical twin?');
 // numOfQuestions++;
 // console.log('Is my sister my identical twin?');
