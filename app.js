@@ -1,10 +1,10 @@
 var correctGuesses = 0;
 var numOfQuestions = 0;
 
-var personName = prompt('Hey! I would love to get to know you a bit. What is your name?');
-console.log('Hey! I would love to get to know you a bit. What is your name?');
-alert('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
-console.log('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
+// var personName = prompt('Hey! I would love to get to know you a bit. What is your name?');
+// console.log('Hey! I would love to get to know you a bit. What is your name?');
+// alert('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
+// console.log('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
 
 var arrayQuestions = [];
 var arrayAnswers = [];
@@ -16,7 +16,12 @@ arrayQuestions.push(pQuesOne);
 if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
   pAnsOne.textContent = 'You are correct! My favorite color is not red, it is turquoise.';
   arrayAnswers.push(userInput);
+}else if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+  pAnsOne.textContent = 'Wrong! My favorite color is turquoise.';
+}else{
+  alert('That is not a valid answer. Moving on...');
 }
+
 // var favColor = prompt('Is my favorite color red?');
 // numOfQuestions++;
 // console.log('Is my favorite color red?');
@@ -34,6 +39,20 @@ if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
 //   console.log('That is not a valid answer. Moving on...');
 // }
 //
+
+var pQuesTwo = document.getElementById('ques-two');
+var pAnsTwo = document.getElementById('ans-two');
+var userInput = prompt('Have I been outside of the country?');
+arrayQuestions.push(pQuesTwo);
+if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+  pAnsTwo.textContent = 'Correct! I have been to Canada... And Mexico for about an hour...';
+  arrayAnswers.push(userInput);
+}else if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
+  pAnsTwo.textContent = 'Wrong! I have been to Canada... And Mexico for about an hour...';
+}else{
+  alert('That is not a valid answer. Moving on...');
+}
+
 // var outsideCountry = prompt('Have I been outside of the country?');
 // numOfQuestions++;
 // console.log('Have I been outside of the country?');
