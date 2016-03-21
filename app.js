@@ -70,6 +70,20 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 //   console.log('That is not a valid answer. Moving on...');
 // }
 //
+
+var pQuesThree = document.getElementById('ques-three');
+var pAnsThree = document.getElementById('ans-three');
+var userInput = prompt('Can I read music and play the piano?');
+arrayQuestions.push(pQuesThree);
+if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
+  pAnsThree.textContent = 'Correct! I have played piano since I was a kid and studied music theory in college.';
+  arrayAnswers.push(userInput);
+}else if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
+  pAnsThree.textContent = 'Wrong! I have played piano since I was a kid and studied music theory in college.';
+}else{
+  alert('That is not a valid answer. Moving on...');
+}
+
 // var playPiano = prompt('Can I read music and play the piano?');
 // numOfQuestions++;
 // console.log('Can I read music and play the piano?');
