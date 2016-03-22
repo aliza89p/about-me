@@ -1,10 +1,10 @@
 var correctGuesses = 0;
 var numOfQuestions = 0;
 
-// var personName = prompt('Hey! I would love to get to know you a bit. What is your name?');
-// console.log('Hey! I would love to get to know you a bit. What is your name?');
-// alert('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
-// console.log('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
+var personName = prompt('Hey! I would love to get to know you a bit. What is your name?');
+console.log('Hey! I would love to get to know you a bit. What is your name?');
+alert('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
+console.log('Wow ' + personName + ', what a fantastic name! Now it is time for a guessing game to get to know me.');
 
 var arrayQuestions = [];
 var arrayAnswers = [];
@@ -12,7 +12,7 @@ var arrayAnswers = [];
 var pQuesOne = document.getElementById('ques-one');
 var pAnsOne = document.getElementById('ans-one');
 var userInput = prompt('Is my favorite color red?');
-arrayQuestions.push(pQuesOne);
+arrayQuestions.push(pQuesOne.textContent);
 if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
   pAnsOne.textContent = 'You are correct! My favorite color is not red, it is turquoise.';
   arrayAnswers.push(userInput);
@@ -43,7 +43,7 @@ if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
 var pQuesTwo = document.getElementById('ques-two');
 var pAnsTwo = document.getElementById('ans-two');
 var userInput = prompt('Have I been outside of the country?');
-arrayQuestions.push(pQuesTwo);
+arrayQuestions.push(pQuesTwo.textContent);
 if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
   pAnsTwo.textContent = 'Correct! I have been to Canada... And Mexico for about an hour...';
   arrayAnswers.push(userInput);
@@ -74,7 +74,7 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 var pQuesThree = document.getElementById('ques-three');
 var pAnsThree = document.getElementById('ans-three');
 var userInput = prompt('Can I read music and play the piano?');
-arrayQuestions.push(pQuesThree);
+arrayQuestions.push(pQuesThree.textContent);
 if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
   pAnsThree.textContent = 'Correct! I have played piano since I was a kid and studied music theory in college.';
   arrayAnswers.push(userInput);
@@ -105,7 +105,7 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 var pQuesFour = document.getElementById('ques-four');
 var pAnsFour = document.getElementById('ans-four');
 var userInput = prompt('Did I become a vegetarian as a kid?');
-arrayQuestions.push(pQuesFour);
+arrayQuestions.push(pQuesFour.textContent);
 if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
   pAnsFour.textContent = 'Correct! I have been a vegetarian since I was 11-years-old.';
   arrayAnswers.push(userInput);
@@ -136,14 +136,14 @@ if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
 var pQuesFive = document.getElementById('ques-five');
 var pAnsFive = document.getElementById('ans-five');
 var userInput = prompt('Is my sister my identical twin?');
-arrayQuestions.push(pQuesFive);
+arrayQuestions.push(pQuesFive.textContent);
 if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
   pAnsFive.textContent = 'You are correct! She is my twin, but we are fraternal. Since you were correct, you get to answer one more bonus question!';
   var pQuesSix = document.getElementById('ques-six');
   var pAnsSix = document.getElementById('ans-six');
   arrayAnswers.push(userInput);
   var userInput = prompt('Does my sister live in Seattle?');
-  arrayQuestions.push(pQuesSix);
+  arrayQuestions.push(pQuesSix.textContent);
   if(userInput.toUpperCase() === 'YES' || userInput.toUpperCase() === 'Y'){
     pAnsSix.textContent = 'CORRECT! She lives in Seattle which makes me very happy :)';
     arrayAnswers.push(userInput);
@@ -189,6 +189,33 @@ if(userInput.toUpperCase() === 'NO' || userInput.toUpperCase() === 'N'){
 //   console.log('That is not a valid answer. But that is okay.');
 // }
 //
+
+var pQuesSeven = document.getElementById('ques-seven');
+var pAnsSeven = document.getElementById('ans-seven');
+var userInput = prompt('What year was I born? You get four guesses...');
+arrayQuestions.push(pQuesSeven.textContent);
+numOfQuestions++;
+var fourGuesses = 1;
+var correctYearBorn = 1989;
+userInput = parseInt(userInput);
+while(fourGuesses < 4){
+  if(userInput === correctYearBorn){
+    correctGuesses++;
+    pAnsSeven.textContent = 'Correct! Nice job ' + personName + '! You got ' + correctGuesses + ' out of ' + numOfQuestions + ' correct!';
+    arrayAnswers.push(userInput);
+    console.log('correct year born guessed');
+  }else if(userInput < correctYearBorn){
+    pAnsSeven.textContent = 'Come on, I am not that old. Try again...';
+    fourGuesses++;
+  }else if(userInput > correctYearBorn){
+    pAnsSeven.textContent = 'I am flattered, but I am not that young. Try again...';
+    fourGuesses++;
+  }else{
+    alert('That is not a valid answer. Moving on...');
+    fourGuesses++;
+  }
+}
+
 // var yearBorn = prompt('What year was I born? You get four guesses...');
 // numOfQuestions++;
 // console.log('What year was I born? You get four guesses...');
